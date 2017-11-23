@@ -31,12 +31,20 @@ public class User {
 
         return id.equals(user.id);
     }
+    
+    @Override
+    public int hashCode() {
+		return 0;
+    	
+    }
 
     @Override
     public String toString() {
         if (id == null) {
-            return null;
+            return "";
         }
-        return "id=" + id + ", lastName=" + lastName + ", firstName=" + firstName;
+        else {
+        	return "id=" + id + ", lastName=" + lastName + ", firstName=" + firstName;
+        }
     }
 }
